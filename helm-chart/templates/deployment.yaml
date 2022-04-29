@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: node-app
+  name: node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: node-app    
+    spec:
+      containers:
+      - image: krishnankannan1236/node-app:cluster
+        name: node-app
+        resources: {}
+status: {}
